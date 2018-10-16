@@ -1,0 +1,120 @@
+package e2;
+
+import java.awt.print.Book;
+import java.util.*;
+
+import com.sun.org.apache.xpath.internal.operations.Bool;
+
+
+
+public class question1 
+{
+	public class MyInteger
+	{
+		int myint;
+		
+		
+		public MyInteger() 
+		{
+			// TODO Auto-generated constructor stub
+			myint = 0;
+		}
+		
+		public MyInteger(int my) 
+		{
+			myint = my;
+		}
+		
+		public Boolean isEven()
+		{
+			if(myint % 2 == 0)
+				return true;
+			else
+				return false;
+		}
+		
+		public Boolean isOdd()
+		{
+			if(myint % 2 != 0)
+				return true;
+			else
+				return false;
+		}
+		
+		public Boolean isPrime()
+		{
+			if(myint == 1 || myint == 2)
+				return false;
+			else
+			{
+				Boolean result = true;
+				for(int i = 2; i < myint/2; i++)
+					if(myint % i == 0)
+						result = false;
+				return result;
+			}
+		}
+		
+		public Boolean equals(int other)
+		{
+			if(myint == other)
+				return true;
+			else
+				return false;
+		}
+		
+		public Boolean equals(MyInteger others)
+		{
+			if(myint == others.myint)
+				return true;
+			else
+				return false;
+		}
+		
+	}
+	
+	
+	public static Boolean isEven(int myint)
+	{
+		if(myint % 2 == 0)
+			return true;
+		else
+			return false;
+	}
+	
+	public static Boolean isOdd(int myint)
+	{
+		if(myint % 2 != 0)
+			return true;
+		else
+			return false;
+	}
+	
+	public static Boolean isPrime(int myint)
+	{
+		if(myint == 1 || myint == 2)
+			return false;
+		else
+		{
+			Boolean result = true;
+			for(int i = 2; i < myint/2; i++)
+				if(myint % i == 0)
+					result = false;
+			return result;
+		}
+	}
+	
+	public static void main(String [] args)
+	{
+		System.out.println("Enter the first number:");
+		Scanner first = new Scanner(System.in);
+		int num1 = first.nextInt();
+		System.out.println("Enter the second number:");
+		Scanner second = new Scanner(System.in);
+		int num2 = second.nextInt();
+		MyInteger my1 = new MyInteger(num1);
+		MyInteger my2 = new MyInteger(num2);
+		System.out.print(my1.isEven());
+	}
+	
+}
