@@ -1,3 +1,5 @@
+package e5;
+
 import java.awt.*;
 import java.awt.event.*;
 
@@ -47,7 +49,7 @@ public class Calculator extends JFrame{
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			// TODO Auto-generated method stub
-			if(output=="²»ÄÜ³ýÒÔ0"){
+			if(output=="ï¿½ï¿½ï¿½Ü³ï¿½ï¿½ï¿½0"){
 				jtf.setText("");
 				ifOp=true;
 			}
@@ -64,7 +66,7 @@ public class Calculator extends JFrame{
 		}
 	}
 	
-	private Calculator(){
+	public Calculator(){
 		jpt.setLayout(new BorderLayout());
 		
 		jpt.add(jtf);
@@ -92,7 +94,7 @@ public class Calculator extends JFrame{
 	}
 	private void operate(String x){
 		double x_=Double.valueOf(x);
-		double y=output=="²»ÄÜ³ýÒÔ0"?0:Double.valueOf(output);
+		double y=output=="ï¿½ï¿½ï¿½Ü³ï¿½ï¿½ï¿½0"?0:Double.valueOf(output);
 		switch(op){
 			case 0:
 				output=x;
@@ -110,7 +112,7 @@ public class Calculator extends JFrame{
 				if(x!="0")
 					output=String.valueOf(y/x_);
 				else
-					output="²»ÄÜ³ýÒÔ0";
+					output="ï¿½ï¿½ï¿½Ü³ï¿½ï¿½ï¿½0";
 				break;
 		}
 	}
@@ -143,7 +145,5 @@ public class Calculator extends JFrame{
 		op=0;
 		output="0";
 	}
-	public static void main(String[] arg){
-		new Calculator();
-	}
+
 }
